@@ -3,7 +3,7 @@
 <template>
   <div class="categorie_accueil">
     <div class="text-center">
-      <v-btn rounded color="primary" dark>
+      <v-btn id="button" rounded color="primary" x-large>
         {{msg}}
       </v-btn>
     </div>
@@ -12,6 +12,9 @@
 
 
 <style>
+#button {
+  width: 80%;
+}
 </style>
 
 
