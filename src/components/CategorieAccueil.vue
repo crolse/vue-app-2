@@ -1,4 +1,3 @@
-// ./components/HomeLink.vue
 
 <template>
   <div class="categorie_accueil">

@@ -1,10 +1,18 @@
 <template>
   <div class="home">
     <div id="container">
-      <categorie-accueil class="categorie_accueil" msg="Apero" />
-      <categorie-accueil class="categorie_accueil" msg="Repas" />
-      <categorie-accueil class="categorie_accueil" msg="Soirée" />
-      <categorie-accueil class="categorie_accueil" msg="Makumba" />
+      <router-link to="/AperoCreate">
+        <categorie-accueil class="categorie_accueil" msg="Apero" />
+      </router-link>
+      <router-link to="/RepasCreate">
+        <categorie-accueil class="categorie_accueil" msg="Repas" />
+      </router-link>
+      <router-link to="/SoireeCreate">
+        <categorie-accueil class="categorie_accueil" msg="Soirée" />
+      </router-link>
+      <router-link to="/MakumbaCreate">
+        <categorie-accueil class="categorie_accueil" msg="Makumba" />
+      </router-link>
     </div>
   </div>
 </template>
@@ -23,7 +31,6 @@
   flex-direction: column;
   justify-content: space-around;
 }
-
 </style>
 
 
