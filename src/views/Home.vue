@@ -10,8 +10,8 @@
       <router-link to="/SoireeCreate">
         <categorie-accueil class="categorie_accueil" msg="Soirée" />
       </router-link>
-      <router-link to="/MakumbaCreate">
-        <categorie-accueil class="categorie_accueil" msg="Makumba" />
+      <router-link to="/MakumbaFormulaire">
+        <categorie-accueil class="categorie_accueil" msg="Soirée" />
       </router-link>
     </div>
   </div>
@@ -30,6 +30,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 </style>
 

@@ -1,12 +1,13 @@
+// ./components/HomeLink.vue
 
 <template>
-  <div class="categorie_accueil">
-    <div class="text-center">
-      <v-btn id="button" rounded color="primary" x-large>
-        {{msg}}
-      </v-btn>
-    </div>
-  </div>
+  
+
+    <v-btn id="button" rounded color="primary" x-large>
+      {{msg}}
+    </v-btn>
+
+  
 </template>
 
 
@@ -14,6 +15,7 @@
 #button {
   width: 80%;
 }
+
 </style>
 
 

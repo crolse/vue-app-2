@@ -42,11 +42,11 @@
 form {
   width: 60%;
 }
-#container_button{
-    margin-top: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#container_button {
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
 
@@ -56,6 +56,7 @@ form {
 <script>
 export default {
   name: 'AperoFormulaire',
+
 
 }
 </script>
