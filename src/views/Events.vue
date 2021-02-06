@@ -1,19 +1,11 @@
 <template>
   <div id="events">
     <event-card></event-card>
-    <event-card></event-card>
-    <event-card></event-card>
-    <event-card></event-card>
 
   </div>
 </template>
 
 <style scoped>
-#events {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 </style>
 
 
