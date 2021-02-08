@@ -1,11 +1,14 @@
 module.exports = {
-    outputDir: 'docs',
+  outputDir: 'docs',
 
-    publicPath: process.env.NODE_ENV === 'production'
-        ? '/vue-app-2/'
-        : '/',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/vue-app-2/'
+    : '/',
 
-    transpileDependencies: [
-      'vuetify'
-    ]
+  transpileDependencies: [
+    'vuetify'
+  ],
+  transpileDependencies: [
+    'vuex-persist'
+  ]
 }

@@ -3,8 +3,8 @@
   <form>
     <v-row id="container">
       <v-col cols="12" md="6">
-        <v-text-field v-model="name" label="Nom">{{name}}</v-text-field>
-        <v-text-field v-model="adresse" label="Adresse"></v-text-field>
+        <v-text-field v-model="name" label="Nom" required>{{name}}</v-text-field>
+        <v-text-field v-model="adresse" label="Adressse"></v-text-field>
         <v-text-field v-model="ville" label="Ville"></v-text-field>
         <v-text-field v-model="code_postal" label="CodePostal"></v-text-field>
       </v-col>
@@ -22,12 +22,16 @@
       <v-checkbox v-model="préfou" label="préfou"></v-checkbox>
     </v-row>
     <div id=container_button>
-      <v-btn class="mr-4" @click="addEvents">
-        Creer
-      </v-btn>
-      <v-btn @click="clear">
-        Annuler
-      </v-btn>
+      <router-link to="/Events">
+        <v-btn class="mr-4" @click="addEvents">
+          Creer
+        </v-btn>
+      </router-link>
+      <router-link to="/Home">
+        <v-btn @click="clear">
+          Annuler
+        </v-btn>
+      </router-link>
     </div>
   </form>
 </template>
@@ -42,7 +46,7 @@ export default {
   methods: {
     addEvents: function () {
       console.log(this.name)
-     this.$store.commit('addEvents', { type: "Soirée", adresse: "Hola", codePostal: "44190", ville: "clisson", date: "2021-09-02" }) 
+      this.$store.commit('addEvents', { type: "Apero", adresse: this.adresse, codePostal: this.codePostal, ville: this.ville, date: "2021-09-02" })
     }
   }
 
