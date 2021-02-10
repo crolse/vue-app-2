@@ -9,7 +9,7 @@
     <v-main>
       <router-view />
     </v-main>
-    <v-bottom-navigation id="nav_bottom" v-model="value">
+    <v-bottom-navigation id="nav_bottom" >
       <v-btn to="/">
         <span>Home</span>
         <v-icon>mdi-home</v-icon>

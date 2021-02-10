@@ -26,6 +26,9 @@ export default new Vuex.Store({
     addEvents (state, event) {
       // mutate state
       state.events.push(event)
+    },
+    deleteEvents (state, index) {
+      state.events.splice(index, 1)
     }
   },
   actions: {

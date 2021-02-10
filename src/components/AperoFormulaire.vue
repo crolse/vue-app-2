@@ -27,11 +27,11 @@
           Creer
         </v-btn>
       </router-link>
-    <router-link to="/">
-      <v-btn >
-        Annuler
-      </v-btn>
-    </router-link>
+      <router-link to="/">
+        <v-btn>
+          Annuler
+        </v-btn>
+      </router-link>
 
     </div>
   </form>
@@ -41,9 +41,21 @@
 <script>
 export default {
   name: 'AperoFormulaire',
+
   data () {
     return {
       picker: new Date().toISOString().substr(0, 10),
+      name: '',
+      adresse: '',
+      ville: '',
+      code: '',
+      description : '',
+      bieres : false ,
+      saucissons : false ,
+      gateaux_apero : false ,
+      vins : false ,
+      prefou : false
+
     }
   },
   methods: {
@@ -52,7 +64,7 @@ export default {
       console.log(this.bieres)
       console.log(this.name)
       this.$store.commit('addEvents', {
-        type: "Apero", nom: this.name, adresse: this.adresse, codePostal: this.code, ville: this.ville, date: this.picker, bieres: this.bieres, saucissons: this.saucissons,
+        type: "Apero", uuid: this.$uuid.v4(), nom: this.name, adresse: this.adresse, codePostal: this.code, ville: this.ville, date: this.picker, bieres: this.bieres, saucissons: this.saucissons,
         gateaux_apero: this.gateaux_apero, vins: this.vins, prefou: this.prefou, description: this.description
       })
     }
@@ -77,6 +89,7 @@ form {
 #container_button {
   margin: 5%;
   display: flex;
+  justify-content: center;
 }
 </style>
 

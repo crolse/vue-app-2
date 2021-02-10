@@ -1,8 +1,8 @@
 /<template>
   <div id="event_card">
-    <div id="container_all_event" v-for="event in $store.state.events" :key="event">
+    <div id="container_all_event" v-for="(event, index) in $store.state.events" :key="index">
       <v-card v-if="event.type == 'Apero' " class="card" elevation="2" outlined shaped>
-        <v-card-title>{{event.type}}</v-card-title>
+        <v-card-title >{{event.type}}</v-card-title>
         <v-card-subtitle>{{event.nom}} / {{event.date}}</v-card-subtitle>
 
         <v-card-text>Adresse : {{ event.adresse }}, {{ event.codePostal }} {{ event.ville }} </v-card-text>
@@ -20,7 +20,7 @@
         </v-card-text>
 
         <v-card-actions id="button_delete">
-          <v-btn color="primary" text>
+          <v-btn @click="deleteEvents(index)" color="primary" text>
             Supprimer
           </v-btn>
         </v-card-actions>
@@ -44,7 +44,7 @@
         </v-card-text>
 
         <v-card-actions id="button_delete">
-          <v-btn color="primary" text>
+          <v-btn @click="deleteEvents(index)" color="primary" text>
             Supprimer
           </v-btn>
         </v-card-actions>
@@ -69,7 +69,7 @@
         </v-card-text>
 
         <v-card-actions id="button_delete">
-          <v-btn color="primary" text>
+          <v-btn @click="deleteEvents(index)" color="primary" text>
             Supprimer
           </v-btn>
         </v-card-actions>
@@ -78,6 +78,26 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'EventCard',
+  data () {
+    return {
+      picker: new Date().toISOString().substr(0, 10),
+      }
+  },
+  methods: {
+    deleteEvents: function (index) {
+      console.log(index)
+      this.$store.commit('deleteEvents', index)
+    }
+  }
+
+
+}
+</script>
+
 
 <style scoped>
 .card {
@@ -101,11 +121,6 @@
 </style>
 
 
-<script>
-export default {
-  name: 'EventCard',
 
-}
-</script>
 
 

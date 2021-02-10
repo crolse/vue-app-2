@@ -23,16 +23,16 @@
     </v-row>
     <div id=container_button>
 
-    <router-link to="Events">
+      <router-link to="Events">
         <v-btn class="mr-4" @click="addEvents">
           Creer
         </v-btn>
       </router-link>
-    <router-link to="/">
-      <v-btn >
-        Annuler
-      </v-btn>
-    </router-link>
+      <router-link to="/">
+        <v-btn>
+          Annuler
+        </v-btn>
+      </router-link>
 
     </div>
   </form>
@@ -45,6 +45,16 @@ export default {
   data () {
     return {
       picker: new Date().toISOString().substr(0, 10),
+      name: '',
+      adresse: '',
+      ville: '',
+      code: '',
+      description: '',
+      raclette : false ,
+      grillade : false ,
+      cote : false ,
+      autre : false ,
+
     }
   },
   methods: {
@@ -76,6 +86,7 @@ form {
 #container_button {
   margin: 5%;
   display: flex;
+   justify-content: center;
 }
 </style>
 

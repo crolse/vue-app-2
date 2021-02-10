@@ -28,11 +28,11 @@
           Creer
         </v-btn>
       </router-link>
-    <router-link to="/">
-      <v-btn >
-        Annuler
-      </v-btn>
-    </router-link>
+      <router-link to="/">
+        <v-btn>
+          Annuler
+        </v-btn>
+      </router-link>
 
     </div>
   </form>
@@ -45,6 +45,16 @@ export default {
   data () {
     return {
       picker: new Date().toISOString().substr(0, 10),
+      name: '',
+      adresse: '',
+      ville: '',
+      code: '',
+      description: '',
+      dormir: false,
+      lumiere: false,
+      enceinte: false,
+      alcool: false,
+      parking: false
     }
   },
   methods: {
@@ -76,6 +86,7 @@ form {
 #container_button {
   margin: 5%;
   display: flex;
+  justify-content: center;
 }
 </style>
 

@@ -5,7 +5,7 @@ import AperoCreate from "../views/AperoCreate"
 import Events from "../views/Events.vue"
 import SoireeCreate from "../views/SoireeCreate.vue"
 import RepasCreate from "../views/RepasCreate.vue"
-import MakumbaCreate from "../views/MakumbaCreate.vue"
+
 
 
 Vue.use(VueRouter)
@@ -36,11 +36,7 @@ const routes = [
     name: 'RepasCreate',
     component: RepasCreate
   },
-  {
-    path: '/MakumbaCreate',
-    name: 'MakumbaCreate',
-    component: MakumbaCreate
-  }
+  
 
 
 ]

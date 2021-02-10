@@ -10,9 +10,7 @@
       <router-link class="link" to="/SoireeCreate">
         <categorie-accueil class="categorie_accueil" msg="Soirée" />
       </router-link>
-      <router-link class="link" to="/MakumbaCreate">
-        <categorie-accueil class="categorie_accueil" msg="Makumba" />
-      </router-link>
+      
     </div>
   </div>
 </template>
