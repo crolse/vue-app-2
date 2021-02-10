@@ -11,12 +11,15 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     events: [
-      { type: "Repas", adresse: "7 avenue de la chico a Leo", codePostal: "44190", ville: "clisson", date: "2021-07-02" },
-      { type: "Soirée", adresse: "12 impasse du crane chauve à Chibrax", codePostal: "44190", ville: "clisson", date: "2021-08-02" },
-      { type: "Makumba", adresse: "52 boulevard du foie de pie à Tatieu", codePostal: "44190", ville: "clisson", date: "2021-09-02" },
+      {
+        type: "Apero", nom: "Bastos", adresse: "8 avenu du dev", codePostal: "010101", ville: "VueCity", date: "2021-08-02", bieres: true, saucissons: true,
+        gateaux_apero: true, vins: true, prefou: true, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus enim id dolor consequat, ut semper tortor facilisis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut tincidunt felis eget vehicula accumsan. Donec et ullamcorper mi. Integer hendrerit sit amet dui nec commodo. Mauris tincidunt nulla enim, et auctor lacus finibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin fermentum, mauris id placerat volutpat, turpis arcu"
+      },
 
 
-    ]
+
+    ],
+
   },
   getters: {},
   mutations: {

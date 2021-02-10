@@ -1,17 +1,17 @@
 <template>
   <div class="home">
     <div id="container">
-      <router-link to="/AperoCreate">
+      <router-link class="link" to="/AperoCreate">
         <categorie-accueil class="categorie_accueil" msg="Apero" />
       </router-link>
-      <router-link to="/RepasCreate">
+      <router-link class="link" to="/RepasCreate">
         <categorie-accueil class="categorie_accueil" msg="Repas" />
       </router-link>
-      <router-link to="/SoireeCreate">
+      <router-link class="link" to="/SoireeCreate">
         <categorie-accueil class="categorie_accueil" msg="Soirée" />
       </router-link>
-      <router-link to="/MakumbaFormulaire">
-        <categorie-accueil class="categorie_accueil" msg="Soirée" />
+      <router-link class="link" to="/MakumbaCreate">
+        <categorie-accueil class="categorie_accueil" msg="Makumba" />
       </router-link>
     </div>
   </div>
@@ -31,6 +31,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+.link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
 

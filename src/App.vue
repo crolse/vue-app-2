@@ -9,24 +9,18 @@
     <v-main>
       <router-view />
     </v-main>
-    <v-bottom-navigation v-model="value">
-      <v-btn value="recent">
-        <span>Recent</span>
-
-        <v-icon>mdi-history</v-icon>
+    <v-bottom-navigation id="nav_bottom" v-model="value">
+      <v-btn to="/">
+        <span>Home</span>
+        <v-icon>mdi-home</v-icon>
       </v-btn>
 
-      <v-btn value="favorites">
-        <span>Favorites</span>
+      <v-btn to="/Events">
+        <span>Evenements</span>
 
         <v-icon>mdi-heart</v-icon>
       </v-btn>
 
-      <v-btn value="nearby">
-        <span>Nearby</span>
-
-        <v-icon>mdi-map-marker</v-icon>
-      </v-btn>
     </v-bottom-navigation>
   </v-app>
 </template>
@@ -46,3 +40,6 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+</style>
